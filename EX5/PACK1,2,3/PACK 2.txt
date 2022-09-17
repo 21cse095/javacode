@@ -1,0 +1,10 @@
+package package1.pack2;
+
+
+public class oops1 {
+    public void display(){
+        System.out.println("PACK2 IS TESTED");
+    }
+}
+Footer
+© 2022 GitHu

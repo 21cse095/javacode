@@ -1,0 +1,15 @@
+package pack1;
+import pack.*;
+    class suboops extends oops {
+        public static void main(String[] args){
+            suboops obj = new suboops();
+            obj.display();
+            try{
+                obj.display1();
+            }
+            catch(Exception e){
+                System.out.println("default property cannot be displayed");
+            }
+        }
+    
+}

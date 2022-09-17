@@ -1,0 +1,19 @@
+package package1;
+
+
+import package1.pack1.*;
+import package1.pack2.*;
+import package1.pack3.*;
+public class yesh {
+
+    public static void main(String[] args) {
+        
+        package1.pack1.oops obj = new package1.pack1.ap1();
+        package1.pack2.oops1 obj1 = new package1.pack2.ap2();
+        package1.pack3.oops2 obj2 = new package1.pack3.ap3();
+        obj.display();
+        obj1.display();
+        obj2.display();
+    }
+    
+}

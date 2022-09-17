@@ -1,0 +1,14 @@
+package vish;
+import yesh.*;
+
+public class convert {
+   
+    public static void main(String[] args){
+        Demo obj = new Demo();
+        obj.convertlmin(4);
+        obj.convertlsec(6);
+        obj.converthm(60);
+        obj.converths(3600);
+       
+    }
+}
