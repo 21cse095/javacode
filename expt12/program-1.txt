@@ -1,0 +1,56 @@
+package kkk;
+
+public class yyyy {
+    public static void main(String[] args) {
+        Integer n[]={1,2,3,4,5};
+        vish<Integer> obj=new vish<>();
+        System.out.println("BEFORE SWAPPING");
+        for (Integer num1 : n) {
+            System.out.println(num1);
+        }
+        obj.swap(n,1,2);
+        System.out.println("AFTER SWAPPING");
+        for (Integer num1 : n) {
+            System.out.println(num1);
+        }
+        
+        vish<Integer> obj1=new vish<>();
+        obj1.c(n);
+      
+        vish<Integer> obj2=new vish<>();
+        obj2.max(n);  
+        
+    }
+}
+class vish<T> {
+    public <T> void swap(T[] a,int i,int j) {
+                T temp = a[i];
+                a[i] = a[j];
+                a[j] = temp;
+     
+    }
+    public  <T> void c(T[] value)
+    {   int count = 0;
+        for(int i=0;i<value.length;i++)
+        {
+            int v = (Integer)value[i];
+            if(v%2==0){
+                count++;
+            }
+            
+        }
+       
+       System.out.println("count : "+count);
+    }
+    public <T extends Comparable<T>>void max(T[] a) {
+    T max = a[0];
+    for (T i : a) {
+        if (i.compareTo(max) > 0) {
+            max = i;
+        }
+    }
+    System.out.println("THE MAXIMUM IN ARRAY IS : "+max);
+}
+    
+    
+}

@@ -1,0 +1,47 @@
+package kkk;
+
+public class search {
+
+    public static void main(String[] args) {
+        
+        Integer num[]={1,2,3,4,5};
+        vish<Integer,Integer> obj=new vish<>();
+        obj.search(15, num);
+       
+        String s[]={"sek","netta","yesh"};
+        vish<String,String> b=new vish<>();
+        b.search("kaka", s);
+        
+        Character ch[]={'a','b','c'};
+        demo<Character,Character> c=new demo<>();
+        c.search('a', ch);
+        
+        Float f[]={1.1f,2.2f,3.3f,4.4f};
+        demo<Float,Float> d=new demo<>();
+        d.search(9.9,f);
+    }
+   
+}
+class vish<T,V>
+{
+    boolean l=false;
+   
+    public  <T,V> void search(T s,V[] v)
+    {
+        for(int i=0;i<v.length;i++)
+        {
+            if(s.equals(v[i]))
+            {
+                l= true;
+                break;
+            }
+            else
+                l=false;      
+        }
+       
+        if(l)
+            System.out.println("THE ELEMENT "+s+" IS FOUND"); 
+        else
+            System.out.println("THE ELEMENT "+s+" IS NOT FOUND"); 
+    }
+}
