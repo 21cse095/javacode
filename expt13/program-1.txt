@@ -1,0 +1,40 @@
+package Array;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+import java.util.Collections;
+
+public class ArrayList {        
+
+    public static void main(String[] args) {
+
+        Scanner inputs = new Scanner(System.in);
+        ArrayList <Integer> nums = new ArrayList<Integer>();
+        ArrayList <Integer> even = new ArrayList<Integer>();
+        System.out.println("Enter a number(-1 to end): ");
+       while(inputs.hasNextInt()) {
+    int num = inputs.nextInt();
+    if (num == -1) {
+        break;
+    }
+    nums.add(num);
+}
+System.out.println(nums);
+ int sum =0;
+for (int i : nums)   
+{  
+sum+=i;  
+}  
+System.out.println("Average of the ArrayList is: " + sum/(float)nums.size());  
+System.out.println("Lowest Element in ArrayList = "
+                           + Collections.min(nums));
+System.out.println("Highest Element in ArrayList = "
+                           + Collections.max(nums));
+for (int i = 0; i < nums.size(); i++) {
+ int n = nums.get(i);
+ if (n % 2 == 0) {
+ even.add(n);
+ } 
+ System.out.println("filter even numbers in list : "+even);
+}
+}

@@ -1,0 +1,80 @@
+package array;
+
+import java.util.*;
+
+public class emp {
+    public static void main(String[] args) {
+         Emp e1 = new Emp("akia", 2000);
+         Emp e2 = new Emp("bkib", 500);
+         Emp e3 = new Emp("ckic", 1000);
+         Emp e4 = new Empl("dkid", 9000);
+         Emp e5 = new Emp("ekie", 1000);
+         Emp e6 = new Emp("fkif", 2000);
+         Emp e7 = new Emp("gkig", 500);
+         Emp e8 = new Emp("hkih", 1000);
+         Emp e9 = new Emp("ikii", 9000);
+         Emp e10 = new Emp("jkij", 1000);
+         Emp e11 = new Emp("kik", 2000);
+         Emp e12 = new Emp("lkil", 500);
+         Emp e13 = new Emp("mkim", 1000);
+         Emp e14 = new Emp("nkin", 9000);
+         Emp e15 = new Emp("okio", 1000);
+         Emp e16 = new Emp("pkip", 2000);
+         Emp e17 = new Emp("qkiq", 500);
+         Emp e18 = new Emp("rkir", 1000);
+         Emp e19 = new Emp("skis", 9000);
+         Emp e20 = new Emp("tkit", 1000);
+ 
+           List<Emp> l = new ArrayList<>();
+           l.add(e1);
+           l.add(e2);
+           l.add(e3);
+           l.add(e4);
+           l.add(e5);
+           l.add(e6);
+           l.add(e7);
+           l.add(e8);
+           l.add(e9);
+           l.add(e10);
+           l.add(e11);
+           l.add(e12);
+           l.add(e13);
+           l.add(e14);
+           l.add(e15);
+           l.add(e16);
+           l.add(e17);
+           l.add(e18);
+           l.add(e19);
+           l.add(e20);
+        Collections.sort(l, new sorting());
+        System.out.println(l);
+        }
+        
+    }
+
+class Emp
+{
+    String name;
+    Integer salary;
+   
+ 
+    public Emp(String n, Integer f)
+ {
+           name = n;
+           salary = f;
+           
+    }
+    public String toString()
+ {
+           return "\n name=" + name + ",salary=" + salary ;
+    }
+    
+}
+
+class sorting implements Comparator<Emp>
+{
+    public int compare(Emp s1,Emp s2)
+    {
+        return s2.name.compareTo(s1.name);
+    }
+}
