@@ -1,0 +1,18 @@
+public class Chairman{
+  private static Chairman ch = new Chairman();
+  private Chairman(){
+  }
+  public static Chairman getInstance(){
+    return ch;
+  }
+}
+this code creates a class chairman and it can be accessed anywhere from the program(i.e public)
+in 2Nd line,we declare a static variable ch of type chairman and assign it to null.
+in 3rd line,we create a private constructor,only methods inside the class can access it.
+in 4th line,while executing } ,the instance of chairman is created and assigned to the static variable ch
+in 5th line,a static getInstance method is created ,for the global access of the instance of chairman class,it checks if already instance of object exists ,if not ,it creates an instance ,else just returns the instance
+This code also makes use of encapsulation by keeping all variables and methods within our class private except for getInstance(), making it more secure and preventing external manipulation or changes to our singleton object.
+  In summary, this code creates a single global point-of-access for accessing and managing our chairman's responsibilities while ensuring that only one person holds these responsibilities at any given time through implementing a singleton design pattern using encapsulation techniques.
+ The code creates a class called Chairman with a private constructor and a static method to return an instance of the class, ensuring that only one instance of the Chairman class can be created.
+  getInstance method check for duplicate objects within the class and can have global access(i.e instance of chairman class can be accessed from outside using getInstance method)
+  
