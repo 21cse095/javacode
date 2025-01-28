@@ -1,0 +1,57 @@
+//REVERSE A STRING
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String str = sc.nextLine();
+        StringBuilder sb = new StringBuilder(str);
+        sb.reverse().toString();
+        System.out.println("The reversed string: "+sb);
+    }
+}
+---------------------------------------------------------
+//PALINDROME
+import java.util.*;
+class Main {
+    public static String palindrome(String st){
+        StringBuilder sb = new StringBuilder(st);
+        String se = sb.reverse().toString();
+        if(se.equals(st)){
+            return "true";
+        }
+        return "false";
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String str = sc.nextLine();
+        String result = palindrome(str);
+        System.out.println(result);
+    }
+}
+-------------------------------------------------------
+//testcases - empty string is palindrome by definition,single character is also palindrome,handle sentence with spaces and special characters.(ignore special character and check if it is palindrome)
+import java.util.*;
+class Main {
+    public static String palindrome(String st){
+        if(st.length()==0||st.length()==1){
+            return "true";
+        }
+        String cleaned = st.replaceAll("[^a-zA-Z0-9]","");
+        StringBuilder sb = new StringBuilder(cleaned);
+        String se = sb.reverse().toString();
+        if(se.equals(cleaned)){
+            return "true";
+        }
+        if(se.equals(st)){
+            return "true";
+        }
+        return "false";
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String str = sc.nextLine();
+        String result = palindrome(str);
+        System.out.println(result);
+    }
+}
+-------------------------------------------------------
